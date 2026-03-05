@@ -1,0 +1,160 @@
+/* Importando a fonte */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  background-color: #fdfdfd;
+  color: #0571c9;
+  border: 2px solid #0571c9;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: #0571c9;
+    color: #fff;
+  }
+
+  &:hover > i {
+    color: #fff;
+  }
+
+  & i {
+    color: #0571c9;
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+
+input,
+select {
+  padding: 0.25rem 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Todo Header */
+.todo-container {
+  max-width: 450px;
+  margin: 3rem auto;
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 15px;
+
+  & header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+/* Todo Form */
+
+#todo-form,
+#edit-form {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+
+  & p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+}
+
+.form-control {
+  display: flex;
+  gap: 0.3rem;
+}
+
+#cancel-edit-btn {
+  margin-top: 1rem;
+}
+
+/* Todo-toolbar */
+#toolbar {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+
+  & h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+#search {
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+
+  & form {
+    display: flex;
+  }
+
+  & input {
+    width: 100%;
+    margin-right: 0.3rem;
+  }
+}
+
+#filter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+
+  & select {
+    flex: 1;
+  }
+}
+
+/* Todo list */
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+
+  & h3 {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+
+  & button {
+    margin-left: 0.4rem;
+  }
+}
+
+.done {
+  background-color: #395169;
+
+  & h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+  }
+}
